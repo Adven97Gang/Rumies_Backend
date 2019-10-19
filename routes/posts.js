@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Note = require('../models/Notes');
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const posts = await Note.find();
         res.json(posts)
