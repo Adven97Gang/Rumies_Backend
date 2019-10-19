@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/c568ae0e-13c6-4030-87fc-09f6881d378e/resourceGroups/Rumies/providers/Microsoft.Web/sites/Rumies",
+    "appService.deploySubpath": ""
+}
