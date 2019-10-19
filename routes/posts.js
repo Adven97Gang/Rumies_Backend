@@ -3,7 +3,14 @@ const router = express.Router();
 const Note = require('../models/Notes');
 
 router.get('/', (req, res) => {
-    res.send('WE ARE on psots hehe');
+    try {
+        const posts = await Note.find();
+        res.json(posts)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
 })
 
 router.post('/', async (req, res) => {
