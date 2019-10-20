@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use('/posts', postRoute)
 
 app.get('/', (req, res) => {
-    res.send('WELCOME RUMIES DEV TEAM :D')
+    res.send('WELCOME RUMIES DEV TEAM :D v 2.0')
 })
 
 mongoose.connect(url, {
