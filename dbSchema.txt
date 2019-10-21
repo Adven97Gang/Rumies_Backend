@@ -1,0 +1,32 @@
+//// users
+
+{
+    _id: 12345654,
+    first_name: Adam,
+    last_name: Tomczak,
+    nick: Adven97,
+    email: atomczak30@gmail.com,
+    password: kukle2k19,    (in database it will be hashed)
+    phone_number: 512049412
+
+}
+ 
+ ///// groups
+
+{   _id: 5da8e600b5d6e426d4d6ef0b,
+    groupname: 'Roomies Dev',
+    user_ids: [ 1234565, 2233469, 9090213, 5434509],
+    shoppinglist: [
+        { item: 'mleko' }, { item: 'browary', comment: 'byle nie za drogie ;)'}, 
+        { item: '100kg ziemniakow' }, { item:'maslo', comment: 'tylko wez to dobre'}
+    ],
+    notes: ['Wynies smieci', 'zrup baze', 'zamuw pitce','Mokapy'],
+    expences: [122,100,80,90,250,21,37],                //need to specify expences timespan (per day, per month?)
+    chat: [
+        { user: 'Misiek', msg: 'elo' }, { user: 'Ania', msg: 'siemka' },
+        { user: 'Antoine', msg: 'co jest?' }, 
+        { user: 'Adam', msg: 'dawajcie zrobmy baze w MongoDB!' }, 
+        { user: 'Antoine', msg: 'ok' }, 
+        { user: 'Ania', msg: 'no i zajebiscie' }
+    ]
+}

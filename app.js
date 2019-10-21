@@ -11,6 +11,7 @@ const port = process.env.PORT;
 
 app.use(cors());
 app.use(bodyParser.json());
+
 app.use('/posts', postRoute)
 
 app.get('/', (req, res) => {
