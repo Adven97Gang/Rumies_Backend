@@ -12,10 +12,10 @@
  ///// groups
 {  
      _id: 5da8e600b5d6e426d4d6ef0b,
-    groupname: 'Roomies Dev',
+    group_name: 'Roomies Dev',
     user_ids: [ 1234565, 2233469, 9090213, 5434509],
 
-    shoppinglist: [
+    shopping_list: [
         { item: 'mleko' checked: true },
         { item: 'browary', comment: 'byle nie za drogie ;) ', checked: false}, 
         { item: '100kg ziemniakow', checked: false },
@@ -23,11 +23,10 @@
     ],
     
     notes: [
-        {title: 'Wynies smieci', checked: true},
-        {title: 'zrup baze', checked: false },
-        {title: 'zrup baze', description: 'w mongoDB najlepiej'  },
+        {title: 'Wynies smieci', checked: false},
+        {title: 'zrób baze danych', description: 'w mongoDB najlepiej', checked: true },
         {title: 'zamuw pitce', description: 'Byle nie hawajska XD', checked: false},
-        {title: 'Mokapy', description: 'Zrobic mokapy aplikacji w balsamiq', checked: false }
+        {title: 'Mokapy', description: 'Zrobic mokapy aplikacji w balsamiq', checked: true }
     ],    
 
     expences: [
