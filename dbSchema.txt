@@ -5,34 +5,43 @@
     last_name: Tomczak,
     nick: Adven97,
     email: atomczak30@gmail.com,
-    password: kukle2k19,    (in database it will be hashed)
-    phone_number: 512049412
-
+    password: passwdd2k19,    (in database it will be hashed)
+    phone_number: 542049412
 }
  
  ///// groups
-{   _id: 5da8e600b5d6e426d4d6ef0b,
+{  
+     _id: 5da8e600b5d6e426d4d6ef0b,
     groupname: 'Roomies Dev',
     user_ids: [ 1234565, 2233469, 9090213, 5434509],
+
     shoppinglist: [
-        { item: 'mleko' checked: true }, { item: 'browary', comment: 'byle nie za drogie', checked: false}, 
-        { item: '100kg ziemniakow', checked: false }, { item:'maslo', comment: 'tylko wez to dobre', checked: false}
+        { item: 'mleko' checked: true },
+        { item: 'browary', comment: 'byle nie za drogie ;) ', checked: false}, 
+        { item: '100kg ziemniakow', checked: false },
+        { item:'maslo', comment: 'tylko wez to dobre', checked: false}
     ],
+    
     notes: [
         {title: 'Wynies smieci', checked: true},
         {title: 'zrup baze', checked: false },
-        {title: 'zrup baze', description: 'Byle nie hawajska XD'  },
+        {title: 'zrup baze', description: 'w mongoDB najlepiej'  },
         {title: 'zamuw pitce', description: 'Byle nie hawajska XD', checked: false},
         {title: 'Mokapy', description: 'Zrobic mokapy aplikacji w balsamiq', checked: false }
+    ],    
 
-    expences: [{date: Date(), amount: 139},{date: Date(), amount: 100},{date: Date(), amount: 32, description: 'Pizza'}],               
+    expences: [
+        {date: Date(), amount: 139}, 
+        {date: Date(), amount: 100}, 
+        {date: Date(), amount: 32, description: 'for Pizza'}
+    ],               
 
     chat: [
-        { user: 'Misiek', msg: 'elo', time: Date() }, 
-        { user: 'Ania', msg: 'siemka', time: Date() },
-        { user: 'Antoine', msg: 'co jest?', time: Date() }, 
-        { user: 'Adam', msg: 'dawajcie zrobmy baze w MongoDB!', time: Date() }, 
-        { user: 'Antoine', msg: 'ok', time: Date() }, 
-        { user: 'Ania', msg: 'no i superr', time: Date() }
+        { user_nick: 'MikeW723', msg: 'elo', time: Date() }, 
+        { user_nick: 'anncisz', msg: 'siemka', time: Date() },
+        { user_nick: 'StrollingOx', msg: 'co jest?', time: Date() }, 
+        { user_nick: 'Adven97', msg: 'dawajcie zrobmy baze w MongoDB!', time: Date() }, 
+        { user_nick: 'StrollingOx', msg: 'ok', time: Date() }, 
+        { user_nick: 'anncisz', msg: 'no i superr', time: Date() }
     ]
 }
