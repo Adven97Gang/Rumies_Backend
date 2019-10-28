@@ -16,7 +16,7 @@
     group_name: 'Roomies Dev',
     user_ids: [ 1234565, 2233469, 9090213, 5434509],
 
-    shopping_list: [
+    shopping_lists: [
         {   
             name: "Zakupy na melo",
             list: [
@@ -29,10 +29,8 @@
     ],
     
     notes: [
-        {title: 'Wynies smieci', checked: false},
-        {title: 'zrób baze danych', description: 'w mongoDB najlepiej', checked: true },
-        {title: 'zamuw pitce', description: 'Byle nie hawajska XD', checked: false},
-        {title: 'Mokapy', description: 'Zrobic mokapy aplikacji w balsamiq', checked: true }
+        {title: 'haslo do wifi', description: 'kukle 2k19' },
+        {title: 'telefon do adama', description: '123456765'},
     ],    
 
     expences: [
