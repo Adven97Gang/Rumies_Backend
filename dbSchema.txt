@@ -21,16 +21,17 @@
             name: "Zakupy na melo",
             list: [
                 { item: 'mleko' checked: true },
-                { item: 'browary', comment: 'byle nie za drogie ;) ', checked: false}, 
+                { item: 'browary', 
+                    comment:{ nick: 'Adven97', description: 'Byle nie za drogie xd'} , checked: false}, 
                 { item: '100kg ziemniakow', checked: false },
-                { item:'maslo', comment: 'tylko wez to dobre', checked: false}
+                { item:'maslo', comment: comment:{ nick: 'anncisz', description: 'to dobre maslo wez'}, checked: false}
             ]    
         }
     ],
     
     notes: [
-        {title: 'haslo do wifi', description: 'kukle 2k19' },
-        {title: 'telefon do adama', description: '123456765'},
+        {nick: 'Adven97',  title: 'haslo do wifi', description: 'kukle 2k19', date: Date() },
+        {nick: 'MikeW', title: 'telefon do adama', description: '123456765', , date: Date()},
     ],    
 
     expences: [
