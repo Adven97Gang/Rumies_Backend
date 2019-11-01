@@ -68,6 +68,17 @@ router.get('/:userId', async (req, res) => {
     }
 });
 
+router.get('/nick/:nick', async (req, res) => {
+    try {
+        const user = await User.findOne({ nick: req.params.nick });
+        res.json(user);
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+});
+
 
 router.delete('/:userId', async (req, res) => {
     try {
