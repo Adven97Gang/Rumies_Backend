@@ -2,8 +2,8 @@
 
 ## Notes
 #### get methods
-Get All notes: https://rumies.herokuapp.com/notes
-Get note by id: https://rumies.herokuapp.com/notes/<id>
+Get All notes: https://rumies.herokuapp.com/notes<br/> 
+Get note by id: https://rumies.herokuapp.com/notes/5da8e600b5d6e426d4d6ef0b
 #### post methods
 ##### Post new note: https://rumies.herokuapp.com/notes
 example:
@@ -16,9 +16,9 @@ example:
 
 ## Users
 #### get methods
-Get all users: https://rumies.herokuapp.com/users
-Get user by id: https://rumies.herokuapp.com/users/<id>
-Get user by nick: https://rumies.herokuapp.com/users/nick/<nick>
+Get all users: https://rumies.herokuapp.com/users<br/> 
+Get user by id: https://rumies.herokuapp.com/users/<br/> 
+Get user by nick: https://rumies.herokuapp.com/users/nick/test1
 #### post methods
 ##### Login: https://rumies.herokuapp.com/users/login
 example:
