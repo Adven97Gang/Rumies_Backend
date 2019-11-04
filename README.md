@@ -9,6 +9,7 @@ Get note by id: https://rumies.herokuapp.com/notes/5da8e600b5d6e426d4d6ef0b
 example:
 ```
 {
+    "author": "adven",
     "title": "wifi password",
     "description": "kukle2k19"
 }
