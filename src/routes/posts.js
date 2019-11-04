@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const note = new Note({
+        author: req.body.author,
         title: req.body.title,
         description: req.body.description
     });
@@ -58,10 +59,13 @@ router.delete('/:postId', async (req, res) => {
 
 router.patch('/:postId', async (req, res) => {
     try {
-        const updatedPost = await Note.updateOne(
-            { _id: req.params.postId },
-            { $set: { title: req.body.title } }
-        );
+        const updatedPost = await Note.updateOne({
+            _id: req.params.postId
+        }, {
+            $set: {
+                title: req.body.title
+            }
+        });
         res.json(updatedPost);
     } catch (err) {
         res.json({
