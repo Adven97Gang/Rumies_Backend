@@ -32,7 +32,7 @@ example:
 example:
 ```
 {
-	"first_name": "Shrek",
+    "first_name": "Shrek",
     "last_name": "XD",
     "nick": "shrek",
     "email": "test1234@gmail.com",
