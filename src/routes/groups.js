@@ -13,6 +13,34 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/notes', async (req, res) => {
+    try {
+        const groups = await Group.find({}, { // in first bracket there can be condition
+            "notes": 1
+        });
+        res.json(groups)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+})
+
+router.get('/notes/:groupId', async (req, res) => {
+    try {
+        const groups = await Group.find({
+            "_id": req.params.groupId
+        }, { // in first bracket there can be condition
+            "notes": 1
+        });
+        res.json(groups)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+})
+
 router.post('/', async (req, res) => {
     const group = new Group({
         group_name: req.body.group_name,
