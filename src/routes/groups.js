@@ -13,12 +13,25 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/:groupId', async (req, res) => {
+    try {
+        const group = await Group.findOne({
+            "_id": req.params.groupId
+        });
+        res.json(group)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+})
+
 router.get('/notes', async (req, res) => {
     try {
-        const groups = await Group.find({}, { // in first bracket there can be condition
+        const notes = await Group.find({}, {
             "notes": 1
         });
-        res.json(groups)
+        res.json(notes)
     } catch (err) {
         res.json({
             message: err
@@ -28,12 +41,12 @@ router.get('/notes', async (req, res) => {
 
 router.get('/notes/:groupId', async (req, res) => {
     try {
-        const groups = await Group.find({
+        const note = await Group.findOne({
             "_id": req.params.groupId
-        }, { // in first bracket there can be condition
+        }, {
             "notes": 1
         });
-        res.json(groups)
+        res.json(note)
     } catch (err) {
         res.json({
             message: err
