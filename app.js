@@ -5,6 +5,7 @@ require('dotenv/config');
 
 const notesRoute = require('./src/routes/posts');
 const userRoute = require('./src/routes/users');
+const groupsRoute = require('./src/routes/groups');
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -17,9 +18,10 @@ app.use(bodyParser.json());
 
 app.use('/notes', notesRoute);
 app.use('/users', userRoute);
+app.use('/groups', groupsRoute);
 
 app.get('/', (req, res) => {
-    res.send('WELCOME RUMIES DEV TEAM :D v 2.3')
+    res.send('WELCOME RUMIES DEV TEAM :D v 3.0')
 })
 
 mongoose.connect(url, {

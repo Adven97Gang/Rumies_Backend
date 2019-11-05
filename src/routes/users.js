@@ -14,19 +14,17 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/login', async (req, res) => {
-    User.findOne({ nick: req.body.nick }, (err, usr) => {
+    User.findOne({
+        nick: req.body.nick
+    }, (err, usr) => {
         if (usr === null) {
             return res.status(400).send({
                 message: "User not found."
             });
-        }
-        else {
+        } else {
             if (usr.validPassword(req.body.password)) {
-                return res.status(201).send({
-                    message: "User Logged In",
-                })
-            }
-            else {
+                return res.status(201).send(usr);
+            } else {
                 return res.status(400).send({
                     message: "Wrong Password"
                 });
@@ -70,7 +68,9 @@ router.get('/:userId', async (req, res) => {
 
 router.get('/nick/:nick', async (req, res) => {
     try {
-        const user = await User.findOne({ nick: req.params.nick });
+        const user = await User.findOne({
+            nick: req.params.nick
+        });
         res.json(user);
     } catch (err) {
         res.json({

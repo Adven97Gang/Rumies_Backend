@@ -22,16 +22,16 @@
             list: [
                 { item: 'mleko' checked: true },
                 { item: 'browary', 
-                    comment:{ nick: 'Adven97', description: 'Byle nie za drogie xd'} , checked: false}, 
+                    comment:{ nick: 'Adven97', content: 'Byle nie za drogie xd'} , checked: false}, 
                 { item: '100kg ziemniakow', checked: false },
-                { item:'maslo', comment: comment:{ nick: 'anncisz', description: 'to dobre maslo wez'}, checked: false}
+                { item:'maslo', comment:{ nick: 'anncisz', content: 'to dobre maslo wez'}, checked: false}
             ]    
         }
     ],
     
     notes: [
-        {nick: 'Adven97',  title: 'haslo do wifi', description: 'kukle 2k19', date: Date() },
-        {nick: 'MikeW', title: 'telefon do adama', description: '123456765', , date: Date()},
+        {nick: 'Adven97', content: 'haslo do wifi: kukle 2k19', date: Date() },
+        {nick: 'MikeW', content: 'telefon do adama 123456765', date: Date()},
     ],    
 
     expences: [
@@ -41,11 +41,48 @@
     ],               
 
     chat: [
-        { user_nick: 'MikeW723', msg: 'elo', time: Date() }, 
-        { user_nick: 'anncisz', msg: 'siemka', time: Date() },
-        { user_nick: 'StrollingOx', msg: 'co jest?', time: Date() }, 
-        { user_nick: 'Adven97', msg: 'dawajcie zrobmy baze w MongoDB!', time: Date() }, 
-        { user_nick: 'StrollingOx', msg: 'ok', time: Date() }, 
-        { user_nick: 'anncisz', msg: 'no i superr', time: Date() }
+        { user_nick: 'MikeW723', message: 'elo', time: Date() }, 
+        { user_nick: 'anncisz', message: 'siemka', time: Date() },
+        { user_nick: 'StrollingOx', message: 'co jest?', time: Date() }, 
+        { user_nick: 'Adven97', message: 'dawajcie zrobmy baze w MongoDB!', time: Date() }, 
+        { user_nick: 'StrollingOx', message: 'ok', time: Date() }, 
+        { user_nick: 'anncisz', message: 'no i superr', time: Date() }
+    ]
+}
+
+
+
+
+///////////////////////////////////// to be inserted
+
+{ 
+    "group_name": "Roomies Dev",
+    "user_ids": ["5dc14e8429453a00249f95e1", "5dbf35d43db4a100240b1aa3", "5dbd5f376a26b0212819c131"],
+
+    "shopping_lists": [
+        {   
+            "name": "Zakupy na melo inferno 2k19",
+            "list": 
+            [
+                { "item": "mleko", "checked": true },
+                { "item": "browary", "checked": false, "comments":[{ "nick": "Adven97", "content": "Byle nie za drogie xd"}] }, 
+                { "item": "100kg ziemniakow", "checked": false },
+                { "item":"maslo", "checked": false, "comments":[{ "nick": "anncisz", "content": "to dobre maslo wez"}] }
+            ]    
+        }
+    ],
+    
+    "notes": [
+        {"nick": "Adven97", "content": "haslo do wifi: kukle 2k19"},
+        {"nick": "MikeW", "content": "telefon do adama 123456765"}
+    ],    
+
+    "chat": [
+        { "user_nick": "MikeW723", "message": "elo" }, 
+        { "user_nick": "anncisz", "message": "siemka"},
+        { "user_nick": "StrollingOx", "message": "co jest?""}, 
+        { "user_nick": "Adven97", "message": "dawajcie zrobmy baze w MongoDB!"}, 
+        { "user_nick": "StrollingOx", "message": "ok" }, 
+        { "user_nick": "anncisz", "message": "no i superr"}
     ]
 }
