@@ -1,6 +1,6 @@
 # Rumies Endpoints
 
-## Notes
+## Notes (DEPRICATED - DO NOT USE IT!)
 #### get methods
 Get All notes: https://rumies.herokuapp.com/notes<br/> 
 Get note by id: https://rumies.herokuapp.com/notes/5da8e600b5d6e426d4d6ef0b
