@@ -3,7 +3,6 @@ const app = express();
 const mongoose = require('mongoose');
 require('dotenv/config');
 
-const notesRoute = require('./src/routes/posts');
 const userRoute = require('./src/routes/users');
 const groupsRoute = require('./src/routes/groups');
 
@@ -16,12 +15,11 @@ const port = process.env.PORT;
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use('/notes', notesRoute);
 app.use('/users', userRoute);
 app.use('/groups', groupsRoute);
 
 app.get('/', (req, res) => {
-    res.send('WELCOME RUMIES DEV TEAM :D v 3.11')
+    res.send('WELCOME RUMIES DEV TEAM :D v 3.2')
 })
 
 mongoose.connect(url, {

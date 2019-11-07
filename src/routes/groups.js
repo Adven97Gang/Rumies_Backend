@@ -2,51 +2,13 @@ const express = require('express');
 const router = express.Router();
 const Group = require('../models/Groups');
 
+const notesRoute = require('./groupElements/notes');
+router.use('/notes', notesRoute)
+
 router.get('/', async (req, res) => {
     try {
         const groups = await Group.find();
         res.json(groups)
-    } catch (err) {
-        res.json({
-            message: err
-        })
-    }
-})
-
-router.get('/:groupId', async (req, res) => {
-    try {
-        const group = await Group.findOne({
-            "_id": req.params.groupId
-        });
-        res.json(group)
-    } catch (err) {
-        res.json({
-            message: err
-        })
-    }
-})
-
-router.get('/notes', async (req, res) => {
-    try {
-        const notes = await Group.find({}, {
-            "notes": 1
-        });
-        res.json(notes)
-    } catch (err) {
-        res.json({
-            message: err
-        })
-    }
-})
-
-router.get('/notes/:groupId', async (req, res) => {
-    try {
-        const note = await Group.findOne({
-            "_id": req.params.groupId
-        }, {
-            "notes": 1
-        });
-        res.json(note)
     } catch (err) {
         res.json({
             message: err
@@ -73,5 +35,33 @@ router.post('/', async (req, res) => {
     }
 
 });
+
+router.get('/:groupId', async (req, res) => {
+    try {
+        const group = await Group.findOne({
+            "_id": req.params.groupId
+        });
+        res.json(group)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+})
+
+// router.get('/notes', async (req, res) => {
+//     try {
+//         const notes = await Group.find({}, {
+//             "notes": 1
+//         });
+//         res.json(notes)
+//     } catch (err) {
+//         res.json({
+//             message: err
+//         })
+//     }
+// })
+
+
 
 module.exports = router;
