@@ -92,3 +92,12 @@ example:
 	"notes": {"author": "Adam", "content": "test test teset"}
 }
 ```
+#### delete methodes
+delete note by its content (with id 5dc485e4f7482e10b04af091) : http://https://rumies.herokuapp.com/groups/notes/5dc485e4f7482e10b04af091
+
+example: 
+```
+{
+   "content": "test test teset"
+}
+```
