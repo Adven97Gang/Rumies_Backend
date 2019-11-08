@@ -3,7 +3,10 @@ const router = express.Router();
 const Group = require('../models/Groups');
 
 const notesRoute = require('./groupElements/notes');
+const shoppingListRoute = require('./groupElements/shoppingLists');
+
 router.use('/notes', notesRoute)
+router.use('/shopping', shoppingListRoute)
 
 router.get('/', async (req, res) => {
     try {

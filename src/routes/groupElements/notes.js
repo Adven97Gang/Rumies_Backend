@@ -34,18 +34,24 @@ router.patch('/:groupId', async (req, res) => {
     }
 })
 
-// router.delete('/notes/:groupId', async (req, res) => {
-//     try {
-//         const removedNote = await Group.remove({
-//             _id: req.params.groupId
-//         });
-//         res.json(removedUser);
-//     } catch (err) {
-//         res.json({
-//             message: err
-//         })
-//     }
+router.delete('/:groupId', async (req, res) => {
+    try {
+        const removedNote = await Group.update({
+            _id: req.params.groupId
+        }, {
+            $pull: {
+                notes: {
+                    content: req.body.content
+                }
+            }
+        });
+        res.json(removedNote);
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
 
-// });
+});
 
 module.exports = router;
