@@ -4,9 +4,11 @@ const Group = require('../models/Groups');
 
 const notesRoute = require('./groupElements/notes');
 const shoppingListRoute = require('./groupElements/shoppingLists');
+const userListRoute = require('./groupElements/userList');
 
 router.use('/notes', notesRoute)
 router.use('/shopping', shoppingListRoute)
+router.use('/users', userListRoute)
 
 router.get('/', async (req, res) => {
     try {
