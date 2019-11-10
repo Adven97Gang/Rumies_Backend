@@ -99,20 +99,25 @@ router.delete('/item/:groupId', async (req, res) => {
     }
 })
 
-/////////////////////////////////////   COMMENTS (DOES NOT WORK YET)
+/////////////////////////////////////   COMMENTS
 
 router.patch('/com/:groupId', async (req, res) => {
     try {
         const list = await Group.updateOne({
-            "_id": req.params.groupId,
-            "shopping_lists.name": req.body.name
+            "_id": req.params.groupId
         }, {
             $push: {
-                "shopping_lists.$.list.$.comments": {
+                "shopping_lists.$[nam].list.$[itm].comments": {
                     nick: req.body.nick,
                     content: req.body.content
                 }
             }
+        }, {
+            arrayFilters: [{
+                "nam.name": req.body.name
+            }, {
+                "itm.item": req.body.item
+            }]
         });
         res.json(list)
     } catch (err) {
@@ -125,14 +130,45 @@ router.patch('/com/:groupId', async (req, res) => {
 router.delete('/com/:groupId', async (req, res) => {
     try {
         const list = await Group.updateOne({
-            "_id": req.params.groupId,
-            "shopping_lists.name": req.body.name
+            "_id": req.params.groupId
         }, {
             $pull: {
-                "shopping_lists.$.list": {
-                    item: req.body.item,
+                "shopping_lists.$[nam].list.$[itm].comments": {
+                    content: req.body.content
                 }
             }
+        }, {
+            arrayFilters: [{
+                "nam.name": req.body.name
+            }, {
+                "itm.item": req.body.item
+            }]
+        });
+        res.json(list)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+})
+
+
+///////////////////////////////// CHECKING
+
+router.patch('/check/:groupId', async (req, res) => {
+    try {
+        const list = await Group.updateOne({
+            "_id": req.params.groupId
+        }, {
+            $set: {
+                "shopping_lists.$[nam].list.$[itm].checked": req.body.checked
+            }
+        }, {
+            arrayFilters: [{
+                "nam.name": req.body.name
+            }, {
+                "itm.item": req.body.item
+            }]
         });
         res.json(list)
     } catch (err) {

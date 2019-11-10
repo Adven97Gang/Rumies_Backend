@@ -19,7 +19,7 @@ app.use('/users', userRoute);
 app.use('/groups', groupsRoute);
 
 app.get('/', (req, res) => {
-    res.send('WELCOME RUMIES DEV TEAM :D v 3.4')
+    res.send('WELCOME RUMIES DEV TEAM :D v 4.0')
 })
 
 mongoose.connect(url, {
