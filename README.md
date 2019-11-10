@@ -1,5 +1,9 @@
 # Rumies Endpoints
 
+IMPORTANT - CURRENT GROUP ID IS: 5dc6ba9c2585a92b30b3fb81
+
+PLEASE US THIS ID WHILE TESTING
+
 ## Notes (DEPRICATED - DO NOT USE IT!)
 #### get methods
 Get All notes: https://rumies.herokuapp.com/notes<br/> 
@@ -83,6 +87,10 @@ example:
 }
 ```
 ### Notes
+
+### get methods
+Get all notes in group: http://https://rumies.herokuapp.com/groups/notes/5dc485e4f7482e10b04af091
+
 #### patch methodes
 Add new note to group (with id 5dc485e4f7482e10b04af091) : http://https://rumies.herokuapp.com/groups/notes/5dc485e4f7482e10b04af091
 
@@ -101,3 +109,58 @@ example:
    "content": "test test teset"
 }
 ```
+
+### Shopping List
+
+### get methods
+Get all shopping lists in group: http://https://rumies.herokuapp.com/groups/shopping/5dc485e4f7482e10b04af091
+
+#### patch methotes
+
+Add new shopping list in group: http://https://rumies.herokuapp.com/groups/shopping/5dc485e4f7482e10b04af091
+example: 
+```
+{
+"shopping_lists": 
+        {   
+            "name": "Zakupy na sylwester",
+            "list": []     (when creating, this list is obviously empty)
+        }
+}
+```
+
+Add new item to shopping list: http://https://rumies.herokuapp.com/groups/shopping/item/5dc485e4f7482e10b04af091
+
+example: 
+```
+{ 
+	"name": "Zakupy na melo inferno 2k19",
+	"item": "harnas z puchy",
+	"checked": false,
+	"comments": []
+}
+```
+
+Add comment to item: http://https://rumies.herokuapp.com/groups/shopping/com/5dc485e4f7482e10b04af091 
+
+example: 
+```
+{ 
+	"name": "Zakupy na melo inferno 2k19",
+	"item": "harnas z puchy",
+	"nick": "Adven97",
+	"content": "bo po dobre trzeba sie schylic i uwazac by z tatra nie pomylic!"
+}
+```
+
+Mark item on list as checked (true or false): http://https://rumies.herokuapp.com/groups/shopping/check/5dc485e4f7482e10b04af091 
+
+example: 
+```
+{ 
+	"name": "Zakupy na melo inferno 2k19",
+	"item": "harnas z puchy",
+	"checked": true
+}
+```
+
