@@ -139,6 +139,14 @@ example:
 	"checked": false,
 	"comments": []
 }
+
+delete 
+
+{ 
+	"name": "Zakupy na melo inferno 2k19",
+	"item": "harnas z puchy"
+}
+
 ```
 
 Add comment to item: http://https://rumies.herokuapp.com/groups/shopping/com/5dc485e4f7482e10b04af091 
