@@ -26,8 +26,7 @@ router.post('/', async (req, res) => {
         group_name: req.body.group_name,
         user_ids: req.body.user_ids,
         shopping_lists: req.body.shopping_lists,
-        notes: req.body.notes,
-        chat: req.body.chat
+        notes: req.body.notes
     });
 
     try {
@@ -41,10 +40,23 @@ router.post('/', async (req, res) => {
 
 });
 
-router.get('/:groupId', async (req, res) => {
+router.get('/id/:groupId', async (req, res) => {
     try {
         const group = await Group.findOne({
             "_id": req.params.groupId
+        });
+        res.json(group)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+})
+
+router.get('/name/:groupName', async (req, res) => {
+    try {
+        const group = await Group.findOne({
+            "slug": req.params.groupName
         });
         res.json(group)
     } catch (err) {

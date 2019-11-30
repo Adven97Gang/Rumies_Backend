@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+const slug = require('mongoose-slug-generator');
+
+mongoose.plugin(slug);
 
 const NoteSchema = mongoose.Schema({
     _id: false,
@@ -56,34 +59,22 @@ const ShoppingListSchema = mongoose.Schema({
     }]
 });
 
-const MessageSchema = mongoose.Schema({
-    _id: false,
-    user_nick: {
-        type: String,
-        required: true
-    },
-    message: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: Date,
-        default: Date.now
-    }
-})
-
 const GroupsSchema = mongoose.Schema({
     group_name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
+    },
+    slug:{
+        type: String, 
+        slug: "group_name"
     },
     user_ids: [{
         type: String,
         required: true
     }],
     shopping_lists: [ShoppingListSchema],
-    notes: [NoteSchema],
-    chat: [MessageSchema],
+    notes: [NoteSchema]
 
 });
 
