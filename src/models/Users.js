@@ -1,6 +1,18 @@
 const mongoose = require('mongoose');
 const crypto = require('crypto');
 
+const GroupListSchema = mongoose.Schema({
+    _id: false,
+    id: {
+        type: String,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true
+    }
+});
+
 const UsersSchema = mongoose.Schema({
     first_name: {
         type: String,
@@ -29,10 +41,7 @@ const UsersSchema = mongoose.Schema({
     salt: {
         type: String
     },
-    phone_number: {
-        type: Number,
-        required: true
-    }
+    groups: [GroupListSchema]
 
 });
 

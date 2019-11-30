@@ -22,6 +22,7 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
+    
     const group = new Group({
         group_name: req.body.group_name,
         user_ids: req.body.user_ids,

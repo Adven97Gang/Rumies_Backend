@@ -13,6 +13,42 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/groups/nick/:nick', async (req, res) => {
+    try {
+        const groups = await User.find({
+            nick: req.params.nick
+        }, {
+            "groups": 1
+        });
+        res.json(groups)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+})
+
+router.patch('/groups/nick/:nick', async (req, res) => {
+    try {
+        const groups = await User.updateOne({
+            nick: req.params.nick
+        }, {
+                $push: {
+                    "groups": {
+                        "id": req.body.id,
+                        "name": req.body.name
+                    }
+                }
+        });
+        
+        res.json(groups)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+})
+
 router.post('/login', async (req, res) => {
     User.findOne({
         nick: req.body.nick
@@ -34,13 +70,14 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/register', async (req, res) => {
+    // res.setEncoding('utf8');
     const user = new User({
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         nick: req.body.nick,
         email: req.body.email,
         password: req.body.password,
-        phone_number: req.body.phone_number
+        groups: req.body.groups
     });
     user.setPassword(req.body.password);
 
