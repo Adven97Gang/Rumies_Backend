@@ -66,19 +66,4 @@ router.get('/name/:groupName', async (req, res) => {
     }
 })
 
-// router.get('/notes', async (req, res) => {
-//     try {
-//         const notes = await Group.find({}, {
-//             "notes": 1
-//         });
-//         res.json(notes)
-//     } catch (err) {
-//         res.json({
-//             message: err
-//         })
-//     }
-// })
-
-
-
 module.exports = router;

@@ -23,7 +23,10 @@ router.patch('/:groupId', async (req, res) => {
             "_id": req.params.groupId
         }, {
             $push: {
-                notes: req.body.notes
+                notes:{
+                    "author": req.body.author,
+                    "content": req.body.content
+                } 
             }
         });
         res.json(note)
