@@ -89,19 +89,20 @@ example:
 ### Notes
 
 ### get methods
-Get all notes in group: http://https://rumies.herokuapp.com/groups/notes/5dc485e4f7482e10b04af091
+Get all notes in group: https://rumies.herokuapp.com/groups/notes/5dc485e4f7482e10b04af091
 
 #### patch methodes
-Add new note to group (with id 5dc485e4f7482e10b04af091) : http://https://rumies.herokuapp.com/groups/notes/5dc485e4f7482e10b04af091
+Add new note to group (with id 5dc485e4f7482e10b04af091) : https://rumies.herokuapp.com/groups/notes/5dc485e4f7482e10b04af091
 
 example:
 ```
 {
-	"notes": {"author": "Adam", "content": "test test teset"}
+	"author": "Adam", 
+	"content": "test test teset"
 }
 ```
 #### delete methodes
-delete note by its content (with id 5dc485e4f7482e10b04af091) : http://https://rumies.herokuapp.com/groups/notes/5dc485e4f7482e10b04af091
+delete note by its content (with id 5dc485e4f7482e10b04af091) : https://rumies.herokuapp.com/groups/notes/5dc485e4f7482e10b04af091
 
 example: 
 ```
@@ -113,11 +114,11 @@ example:
 ### Shopping List
 
 ### get methods
-Get all shopping lists in group: http://https://rumies.herokuapp.com/groups/shopping/5dc485e4f7482e10b04af091
+Get all shopping lists in group: https://rumies.herokuapp.com/groups/shopping/5dc485e4f7482e10b04af091
 
 #### patch methotes
 
-Add new shopping list in group: http://https://rumies.herokuapp.com/groups/shopping/5dc485e4f7482e10b04af091
+Add new shopping list in group: https://rumies.herokuapp.com/groups/shopping/5dc485e4f7482e10b04af091
 example: 
 ```
 {
@@ -129,7 +130,7 @@ example:
 }
 ```
 
-Add new item to shopping list: http://https://rumies.herokuapp.com/groups/shopping/item/5dc485e4f7482e10b04af091
+Add new item to shopping list: https://rumies.herokuapp.com/groups/shopping/item/5dc485e4f7482e10b04af091
 
 example: 
 ```
@@ -149,7 +150,7 @@ delete
 
 ```
 
-Add comment to item: http://https://rumies.herokuapp.com/groups/shopping/com/5dc485e4f7482e10b04af091 
+Add comment to item: https://rumies.herokuapp.com/groups/shopping/com/5dc485e4f7482e10b04af091 
 
 example: 
 ```
@@ -161,7 +162,7 @@ example:
 }
 ```
 
-Mark item on list as checked (true or false): http://https://rumies.herokuapp.com/groups/shopping/check/5dc485e4f7482e10b04af091 
+Mark item on list as checked (true or false): https://rumies.herokuapp.com/groups/shopping/check/5dc485e4f7482e10b04af091 
 
 example: 
 ```
