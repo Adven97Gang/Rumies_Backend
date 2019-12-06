@@ -13,6 +13,17 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/name', async (req, res) => {
+    try {
+        const users = await User.find({}, { first_name: 1, last_name: 1, nick: 1 });
+        res.json(users)
+    } catch (err) {
+        res.json({
+            message: err
+        })
+    }
+})
+
 router.get('/groups/nick/:nick', async (req, res) => {
     try {
         const groups = await User.findOne({
