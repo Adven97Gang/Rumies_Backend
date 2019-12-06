@@ -158,3 +158,4 @@ example:
 }
 ```
 
+GET users groups : http://rumies.herokuapp.com/users/groups/nick/shrek2
