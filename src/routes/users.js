@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
 router.get('/groups/nick/:nick', async (req, res) => {
     try {
-        const groups = await User.find({
+        const groups = await User.findOne({
             nick: req.params.nick
         }, {
             "groups": 1
